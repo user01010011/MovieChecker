@@ -34,40 +34,55 @@ function App() {
     <div className="App">
       <h1>Movie Checker</h1>
       <form onSubmit={handleSubmit}>
-        <label>Movie Name:</label>
-        <input
-          type="text"
-          name="movieName"
-          value={formData.movieName}
-          onChange={handleChange}
-          placeholder="Movie Name"
-          required
-        />
-        <label>Start Date:</label>
-        <input
-          type="date"
-          name="startDate"
-          value={formData.startDate}
-          onChange={handleChange}
-          required
-        />
-        <label>End Date:</label>
-        <input
-          type="date"
-          name="endDate"
-          value={formData.endDate}
-          onChange={handleChange}
-          required
-        />
-        <label>Email (to receive updates):</label>
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          placeholder="Your Email"
-          required
-        />
+        <div className="form-group mb-3">
+          <label htmlFor="name" className="form-label">Movie Name: </label>
+          <input
+            className="form-control" id="movie-name"
+            type="text"
+            name="movieName"
+            value={formData.movieName}
+            onChange={handleChange}
+            placeholder="Movie Name"
+            required
+          />
+        </div>
+
+        <div className="form-group mb-3">
+          <label htmlFor="name" className="form-label">Start Date:</label>
+          <input className="form-control" id="start-date"
+            type="date"
+            name="startDate"
+            value={formData.startDate}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="form-group mb-3">
+          <label htmlFor="name" className="form-label">End Date:</label>
+          <input
+            className="form-control" id="end-date"
+            type="date"
+            name="endDate"
+            value={formData.endDate}
+            onChange={handleChange}
+            required
+          />
+        </div>
+
+        <div className="form-group mb-3">
+          <label htmlFor="name" className="form-label">Email (to receive updates):</label>
+          <input
+            className="form-control" id="email"
+            type="email"
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
+            placeholder="Your Email"
+            required
+          />
+        </div>
+
         <button type="submit">Check Showtimes</button>
       </form>
     </div>
